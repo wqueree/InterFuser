@@ -22,8 +22,8 @@ RUN git clone https://github.com/wqueree/InterFuser.git
 
 # Install InterFuser
 WORKDIR /InterFuser
-COPY environment.yml .
-RUN conda env create -f environment.yml
+RUN git checkout develop
+RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
 RUN ls -la /root/anaconda3/envs
 SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
@@ -41,4 +41,4 @@ RUN apt-get install neofetch -y
 # Finalise
 WORKDIR /
 RUN conda init bash
-RUN neofetch
+WORKDIR /InterFuser
