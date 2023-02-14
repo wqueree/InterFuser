@@ -1,5 +1,15 @@
 FROM ubuntu:bionic
 
+# User Details
+ENV USER="wlq20"
+ENV NAME="Will Queree"
+ENV EMAIL="wqueree@gmail.com"
+
+# Create User
+RUN adduser $USER
+RUN adduser $USER sudo
+RUN su $USER
+
 # Update
 RUN apt-get update
 RUN apt-get upgrade -y
@@ -11,12 +21,11 @@ RUN apt-get install gcc wget git -y
 RUN apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 RUN bash Anaconda3-2020.11-Linux-x86_64.sh -b
-ENV PATH="/root/anaconda3/bin:$PATH"
+ENV PATH="/${USER}/anaconda3/bin:$PATH"
 
 # Configure git
-RUN git config --global user.name "Will Queree"
-RUN git config --global user.email "wqueree@gmail.com"
-
+RUN git config --global user.name ${NAME}
+RUN git config --global user.email ${EMAIL}
 # Clone InterFuser Repository
 RUN git clone https://github.com/wqueree/InterFuser.git
 
@@ -26,7 +35,6 @@ RUN git pull
 RUN git checkout develop
 RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
-RUN ls -la /root/anaconda3/envs
 SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
 RUN python setup.py develop
 
