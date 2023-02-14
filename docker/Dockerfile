@@ -22,7 +22,7 @@ RUN wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 RUN chmod +x ./Anaconda3-2020.11-Linux-x86_64.sh
 USER ${USER}
 RUN ./Anaconda3-2020.11-Linux-x86_64.sh -b
-ENV PATH="/${USER}/anaconda3/bin:$PATH"
+ENV PATH="/home/${USER}/anaconda3/bin:$PATH"
 USER root
 
 # Configure git
@@ -32,10 +32,12 @@ RUN git config --global user.email ${EMAIL}
 RUN git clone https://github.com/wqueree/InterFuser.git
 
 # Install InterFuser
-USER ${USER}
 WORKDIR /InterFuser
 RUN git pull
 RUN git checkout develop
+RUN ls -la /root
+RUN ls -la /home/wlq20
+USER ${USER}
 RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
 SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
