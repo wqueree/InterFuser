@@ -22,9 +22,11 @@ RUN apt-get install gcc wget git -y
 # Install Anaconda3
 RUN apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+RUN chmod +x ./Anaconda3-2020.11-Linux-x86_64.sh
 USER ${USER}
 RUN ./Anaconda3-2020.11-Linux-x86_64.sh -b
 ENV PATH="/${USER}/anaconda3/bin:$PATH"
+USER root
 
 # Configure git
 RUN git config --global user.name ${NAME}
