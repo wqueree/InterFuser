@@ -5,9 +5,6 @@ ENV USER="wlq20"
 ENV NAME="Will Queree"
 ENV EMAIL="wqueree@gmail.com"
 
-# Use Bash Shell
-SHELL ["bin/bash", "-c"]
-
 # Create User
 RUN adduser ${USER}
 RUN adduser ${USER} sudo
@@ -35,6 +32,7 @@ RUN git config --global user.email ${EMAIL}
 RUN git clone https://github.com/wqueree/InterFuser.git
 
 # Install InterFuser
+USER ${USER}
 WORKDIR /InterFuser
 RUN git pull
 RUN git checkout develop
