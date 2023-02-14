@@ -42,4 +42,3 @@ RUN apt-get install neofetch -y
 # Finalise
 WORKDIR /
 RUN conda init bash
-WORKDIR /InterFuser
