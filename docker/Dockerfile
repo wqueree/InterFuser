@@ -6,9 +6,9 @@ ENV NAME="Will Queree"
 ENV EMAIL="wqueree@gmail.com"
 
 # Create User
-RUN adduser $USER
-RUN adduser $USER sudo
-RUN su $USER
+RUN adduser ${USER}
+RUN adduser ${USER} sudo
+RUN su ${USER}
 
 # Update
 RUN apt-get update
