@@ -22,6 +22,7 @@ RUN git clone https://github.com/wqueree/InterFuser.git
 
 # Install InterFuser
 WORKDIR /InterFuser
+RUN git pull
 RUN git checkout develop
 RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
