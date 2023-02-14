@@ -51,8 +51,10 @@ RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
 # Install Development Utilities
 USER root
 RUN apt-get install neofetch -y
-USER ${USER}
 
 # Finalise
+SHELL ["/bin/bash", "-c"]
 WORKDIR /
+RUN conda init bash
+USER ${USER}
 RUN conda init bash
