@@ -32,6 +32,7 @@ RUN git config --global user.email ${EMAIL}
 # Clone InterFuser Repository
 USER root
 RUN git clone https://github.com/wqueree/InterFuser.git
+RUN chown -R InterFuser ${USER}
 
 # Install InterFuser
 WORKDIR /InterFuser
@@ -53,8 +54,5 @@ USER root
 RUN apt-get install neofetch -y
 
 # Finalise
-SHELL ["/bin/bash", "-c"]
 WORKDIR /
-RUN conda init bash
-USER ${USER}
 RUN conda init bash
