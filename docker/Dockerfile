@@ -1,3 +1,4 @@
+# Base Image Ubuntu 18.04 Bionic Beaver
 FROM ubuntu:bionic
 
 # User Details
@@ -23,21 +24,19 @@ RUN chmod +x ./Anaconda3-2020.11-Linux-x86_64.sh
 USER ${USER}
 RUN ./Anaconda3-2020.11-Linux-x86_64.sh -b
 ENV PATH="/home/${USER}/anaconda3/bin:$PATH"
-USER root
 
 # Configure git
 RUN git config --global user.name ${NAME}
 RUN git config --global user.email ${EMAIL}
+
 # Clone InterFuser Repository
+USER root
 RUN git clone https://github.com/wqueree/InterFuser.git
 
 # Install InterFuser
 WORKDIR /InterFuser
 RUN git pull
 RUN git checkout develop
-RUN ls -la /root
-RUN ls -la /home/wlq20
-USER ${USER}
 RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
 SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
