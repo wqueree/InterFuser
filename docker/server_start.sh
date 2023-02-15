@@ -1,0 +1,1 @@
+hare run -p 17799:17799 --runtime=nvidia --gpus '"device=2,3,5"' carlasim/carla:0.9.10.1
