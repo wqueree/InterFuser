@@ -56,8 +56,8 @@ RUN apt-get install libpng16-16 libjpeg8 -y
 RUN apt-get install neofetch net-tools -y
 
 # Post Installation Pull
-USER ${USER}
 RUN git pull
+RUN chmod +x ./init.sh
 
 # Finalise
 WORKDIR /
