@@ -54,7 +54,7 @@ USER root
 RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
 
 # Install Development Utilities
-RUN apt-get install neofetch net-tools -y
+RUN apt-get install neofetch net-tools screen -y
 
 # Post Installation Pull
 USER ${USER}
