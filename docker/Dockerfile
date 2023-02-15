@@ -49,6 +49,7 @@ WORKDIR /InterFuser
 RUN chmod +x setup_carla.sh
 RUN ./setup_carla.sh
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
+COPY /homes/wlq20/CM30082/InterFuser/leaderboard/team_code/interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
 RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
 
