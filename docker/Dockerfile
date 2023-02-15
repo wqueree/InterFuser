@@ -50,7 +50,7 @@ RUN chmod +x setup_carla.sh
 RUN ./setup_carla.sh
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
 USER root
-RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 -y
+RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
 
 # Install Development Utilities
 RUN apt-get install neofetch net-tools -y
