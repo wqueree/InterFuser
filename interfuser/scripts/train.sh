@@ -1,4 +1,4 @@
-GPU_NUM=8
+GPU_NUM=3
 DATASET_ROOT='dataset/'
 
 ./distributed_train.sh $GPU_NUM $DATASET_ROOT  --dataset carla --train-towns 1 2 3 4 6 7 10  --val-towns 5 \
