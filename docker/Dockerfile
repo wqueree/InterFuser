@@ -56,10 +56,12 @@ RUN apt-get install libpng16-16 libjpeg8 -y
 RUN apt-get install neofetch net-tools -y
 
 # Post Installation Pull
+USER ${USER}
 RUN git pull
 
 # Finalise
 WORKDIR /
+USER root
 RUN conda init bash
 USER ${USER}
 RUN conda init bash
