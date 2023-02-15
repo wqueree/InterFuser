@@ -32,9 +32,10 @@ RUN git config --global user.email ${EMAIL}
 # Clone InterFuser Repository
 USER root
 RUN git clone https://github.com/wqueree/InterFuser.git
-RUN chown -R InterFuser ${USER}
+RUN chown -R ${USER} InterFuser
 
 # Install InterFuser
+USER ${USER}
 WORKDIR /InterFuser
 RUN git pull
 RUN git checkout develop
@@ -48,11 +49,15 @@ WORKDIR /InterFuser
 RUN chmod +x setup_carla.sh
 RUN ./setup_carla.sh
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
+USER root
+RUN apt-get install libpng16-16 libjpeg8
 
 # Install Development Utilities
-USER root
-RUN apt-get install neofetch -y
+RUN apt-get install neofetch net-tools -y
 
 # Finalise
 WORKDIR /
 RUN conda init bash
+USER ${USER}
+RUN conda init bash
+RUN git pull
