@@ -63,5 +63,6 @@ RUN git pull
 # Finalise
 WORKDIR /
 RUN conda init bash
+RUN pip install -U setuptools
 USER root
 RUN conda init bash
