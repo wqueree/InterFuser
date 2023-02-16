@@ -17,7 +17,7 @@ export PYTHONPATH=$PYTHONPATH:scenario_runner
 
 export LEADERBOARD_ROOT=leaderboard
 export CHALLENGE_TRACK_CODENAME=SENSORS
-export PORT=2000 # same as the carla server port
+export PORT=17799 # same as the carla server port
 export TM_PORT=2500 # port for traffic manager, required when spawning multiple servers/clients
 export DEBUG_CHALLENGE=0
 export REPETITIONS=1 # multiple evaluation runs
