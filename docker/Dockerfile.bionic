@@ -1,0 +1,68 @@
+# Base Image Ubuntu 18.04 Bionic Beaver
+FROM ubuntu:bionic
+
+# User Details
+ENV USER="wlq20"
+ENV NAME="Will Queree"
+ENV EMAIL="wqueree@gmail.com"
+
+# Create User
+RUN adduser ${USER}
+RUN adduser ${USER} sudo
+
+# Update
+RUN apt-get update
+RUN apt-get upgrade -y
+
+# Install Dockerfile Utilities
+RUN apt-get install gcc wget git -y
+
+# Install Anaconda3
+RUN apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+RUN chmod +x ./Anaconda3-2020.11-Linux-x86_64.sh
+USER ${USER}
+RUN ./Anaconda3-2020.11-Linux-x86_64.sh -b
+ENV PATH="/home/${USER}/anaconda3/bin:$PATH"
+
+# Configure git
+RUN git config --global user.name ${NAME}
+RUN git config --global user.email ${EMAIL}
+
+# Clone InterFuser Repository
+USER root
+RUN git clone https://github.com/wqueree/InterFuser.git
+RUN chown -R ${USER} InterFuser
+
+# Install InterFuser
+USER ${USER}
+WORKDIR /InterFuser
+RUN git pull
+RUN git checkout develop
+RUN conda env create -f docker/environment.yml
+WORKDIR /InterFuser/interfuser
+SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
+RUN python setup.py develop
+
+# Install CARLA
+WORKDIR /InterFuser
+RUN chmod +x setup_carla.sh
+RUN ./setup_carla.sh
+RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
+COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
+USER root
+RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
+
+# Install Development Utilities
+RUN apt-get install neofetch net-tools screen -y
+
+# Post Installation Pull
+USER ${USER}
+RUN git pull
+
+# Finalise
+WORKDIR /
+USER root
+RUN conda init bash
+USER ${USER}
+RUN conda init bash
