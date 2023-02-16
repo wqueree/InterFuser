@@ -54,7 +54,7 @@ USER root
 RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
 
 # Install Development Utilities
-RUN apt-get install neofetch net-tools screen xorg xauth openbox -y
+RUN apt-get install neofetch net-tools screen xorg xauth openbox freeglut3-dev mesa-utils libvulkan1 mesa-vulkan-drivers vulkan-utils -y
 
 # Post Installation Pull
 USER ${USER}

@@ -1,1 +1,1 @@
-hare run -d -it -p 17799:17799 --runtime=nvidia --gpus all wlq20/interfuser
+hare run -d -it -e DISPLAY=$DISPLAY --runtime=nvidia --gpus all wlq20/interfuser
