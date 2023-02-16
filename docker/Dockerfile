@@ -62,7 +62,6 @@ RUN git pull
 
 # Finalise
 WORKDIR /
-USER root
 RUN conda init bash
-USER ${USER}
+USER root
 RUN conda init bash
