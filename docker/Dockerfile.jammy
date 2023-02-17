@@ -51,7 +51,7 @@ RUN ./setup_carla.sh
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
 COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
-RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
+RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 xserver-xorg mesa-utils libvulkan1 -y
 
 # Install Development Utilities
 RUN apt-get install neofetch net-tools screen -y
@@ -65,4 +65,6 @@ WORKDIR /
 USER root
 RUN conda init bash
 USER ${USER}
+ENV XDG_RUNTIME_DIR /run/user/$(id -u)
 RUN conda init bash
+RUN pip install -U setuptools
