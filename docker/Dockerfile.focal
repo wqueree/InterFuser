@@ -1,6 +1,5 @@
 # Base Image Ubuntu 20.04 Focal Fossa
-FROM ubuntu:fossa
-
+FROM ubuntu:focal
 # User Details
 ENV USER="wlq20"
 ENV NAME="Will Queree"
