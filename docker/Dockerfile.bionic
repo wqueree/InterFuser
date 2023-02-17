@@ -53,8 +53,9 @@ COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
 RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
 
-
 # Display Configuration
+RUN wget http://download.nvidia.com/XFree86/Linux-x86_64/450.57/NVIDIA-Linux-x86_64-450.57.run
+RUN /bin/bash NVIDIA-Linux-x86_64-450.57.run --accept-license --no-questions --ui=none
 RUN apt-get install xserver-xorg mesa-utils libvulkan1 -y
 RUN nvidia-xconfig --preserve-busid -a --virtual=1280x1024
 ENV XDG_RUNTIME_DIR /run/user/$(id -u)
