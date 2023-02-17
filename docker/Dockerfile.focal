@@ -1,5 +1,6 @@
 # Base Image Ubuntu 20.04 Focal Fossa
 FROM ubuntu:focal
+
 # User Details
 ENV USER="wlq20"
 ENV NAME="Will Queree"
@@ -50,7 +51,14 @@ RUN ./setup_carla.sh
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10-py3.7-linux-x86_64.egg
 COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
-RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 xserver-xorg mesa-utils libvulkan1 -y
+RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6
+
+
+# Display Configuration
+RUN apt-get install xserver-xorg mesa-utils libvulkan1 -y
+RUN nvidia-xconfig --preserve-busid -a --virtual=1280x1024
+ENV XDG_RUNTIME_DIR /run/user/$(id -u)
+ENV SDL_VIDEODRIVER x11
 
 # Install Development Utilities
 RUN apt-get install neofetch net-tools screen -y
@@ -61,9 +69,7 @@ RUN git pull
 
 # Finalise
 WORKDIR /
-USER root
-RUN conda init bash
-USER ${USER}
-ENV XDG_RUNTIME_DIR /run/user/$(id -u)
 RUN conda init bash
 RUN pip install -U setuptools
+USER root
+RUN conda init bash
