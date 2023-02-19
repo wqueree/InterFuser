@@ -1,0 +1,635 @@
+(interfuser) wqueree@XPS-15-UBUNTU:~/University/CM30082/InterFuser$ ./leaderboard/scripts/run_evaluation.sh 
+leaderboard/leaderboard/leaderboard_evaluator.py:91: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+  if LooseVersion(dist.version) < LooseVersion('0.9.10'):
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+
+========= Preparing RouteScenario_16 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_18_22_06_31
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+Skipping scenario 'Scenario4' due to setup error: list index out of range
+> Running the route
+ERROR: failed to destroy actor 273 : unable to destroy actor: not found 
+> Stopping the route
+
+========= Results of RouteScenario_16 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-18 22:08:44 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-18 23:39:12 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 5428.47s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 917.05s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.169               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 19.52 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+ERROR: failed to destroy actor 306 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 311 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 331 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 363 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 379 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 382 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 384 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 387 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 407 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 408 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 411 : unable to destroy actor: not found 
+
+========= Preparing RouteScenario_17 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_18_23_39_14
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+ERROR: failed to destroy actor 568 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 566 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 583 : unable to destroy actor: not found 
+> Stopping the route
+
+========= Results of RouteScenario_17 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-18 23:40:57 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 00:23:33 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 2556.02s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 714.05s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.279               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 30.65 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ FAILURE │ 1.53 %  │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 3 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+
+========= Preparing RouteScenario_18 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_00_23_34
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+/home/wqueree/University/CM30082/InterFuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+> Stopping the route
+
+========= Results of RouteScenario_18 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 00:25:38 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 02:02:35 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 5817.65s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 846.05s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.145               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 32.83 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+ERROR: failed to destroy actor 922 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 925 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 935 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 948 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 956 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 967 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 974 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 981 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 986 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1005 : unable to destroy actor: not found 
+
+========= Preparing RouteScenario_19 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_02_02_37
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+> Stopping the route
+
+========= Results of RouteScenario_19 (repetition 0) ------ SUCCESS =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 02:05:45 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 03:00:43 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 3297.88s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 539.65s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.164               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ SUCCESS │ 100 %   │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ SUCCESS │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+
+========= Preparing RouteScenario_20 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_03_00_44
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+> Stopping the route
+
+========= Results of RouteScenario_20 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 03:03:13 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 04:51:25 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 6491.65s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 1049.05s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.162               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 98.39 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+ERROR: failed to destroy actor 1519 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1526 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1529 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1536 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1563 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1564 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1582 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1583 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1586 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1589 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1592 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1598 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1606 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1620 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1625 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1631 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1633 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1634 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1635 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 1636 : unable to destroy actor: not found 
+
+========= Preparing RouteScenario_21 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_04_51_26
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+> Stopping the route
+
+========= Results of RouteScenario_21 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 04:52:38 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 05:29:22 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 2204.28s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 346.95s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.157               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ SUCCESS │ 100 %   │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ SUCCESS │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+
+========= Preparing RouteScenario_22 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_05_29_24
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+ERROR: failed to destroy actor 2056 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2058 : unable to destroy actor: not found 
+> Stopping the route
+
+========= Results of RouteScenario_22 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 05:31:30 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 06:59:21 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 5270.2s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 798.3s              │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.151               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ SUCCESS │ 100 %   │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ SUCCESS │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+
+========= Preparing RouteScenario_23 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_06_59_23
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+> Stopping the route
+
+========= Results of RouteScenario_23 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 07:02:01 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 08:52:36 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 6635.6s             │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 1067.05s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.161               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 45.2 %  │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+ERROR: failed to destroy actor 2586 : unable to destroy actor: not found 
+
+========= Preparing RouteScenario_24 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_08_52_38
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+Skipping scenario 'Scenario4' due to setup error: list index out of range
+> Running the route
+ERROR: failed to destroy actor 2874 : unable to destroy actor: not found 
+> Stopping the route
+
+========= Results of RouteScenario_24 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 08:56:58 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 11:54:13 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 10635.07s           │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 1792.05s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.169               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 43.99 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 4 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ FAILURE │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+ERROR: failed to destroy actor 2889 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2893 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2894 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2895 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2896 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2897 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2899 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2901 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2904 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2905 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2906 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2909 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2910 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2914 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2916 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2917 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2921 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2927 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2928 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2929 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2931 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2932 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2933 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2934 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2935 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2937 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2938 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2940 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2941 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2943 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2944 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2946 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2947 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2951 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2952 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2955 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2957 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2958 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2960 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2962 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2963 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2965 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2968 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2969 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2971 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2972 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2975 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2976 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2979 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2981 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2982 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2983 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2984 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2987 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2988 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2991 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2992 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2993 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2994 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2995 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2997 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 2998 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 3002 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 3003 : unable to destroy actor: not found 
+ERROR: failed to destroy actor 3004 : unable to destroy actor: not found 
+
+========= Preparing RouteScenario_25 (repetition 0) =========
+> Setting up the agent
+load model: leaderboard/team_code/interfuser.pth.tar
+routes_town05_long_02_19_11_54_15
+> Loading the world
+load
+load
+load
+load
+load
+load
+load
+> Running the route
+> Stopping the route
+
+========= Results of RouteScenario_25 (repetition 0) ------ FAILURE =========
+
+╒═════════════════════════════════╤═════════════════════╕
+│ Start Time                      │ 2023-02-19 11:57:22 │
+├─────────────────────────────────┼─────────────────────┤
+│ End Time                        │ 2023-02-19 13:13:00 │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (System Time)          │ 4538.03s            │
+├─────────────────────────────────┼─────────────────────┤
+│ Duration (Game Time)            │ 768.1s              │
+├─────────────────────────────────┼─────────────────────┤
+│ Ratio (System Time / Game Time) │ 0.169               │
+╘═════════════════════════════════╧═════════════════════╛
+
+╒═══════════════════════╤═════════╤═════════╕
+│ Criterion             │ Result  │ Value   │
+├───────────────────────┼─────────┼─────────┤
+│ RouteCompletionTest   │ FAILURE │ 41.29 % │
+├───────────────────────┼─────────┼─────────┤
+│ OutsideRouteLanesTest │ SUCCESS │ 0 %     │
+├───────────────────────┼─────────┼─────────┤
+│ CollisionTest         │ FAILURE │ 1 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningRedLightTest   │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ RunningStopTest       │ SUCCESS │ 0 times │
+├───────────────────────┼─────────┼─────────┤
+│ InRouteTest           │ SUCCESS │         │
+├───────────────────────┼─────────┼─────────┤
+│ AgentBlockedTest      │ FAILURE │         │
+├───────────────────────┼─────────┼─────────┤
+│ Timeout               │ SUCCESS │         │
+╘═══════════════════════╧═════════╧═════════╛
+
+> Registering the route statistics
+> Registering the global statistics
+
