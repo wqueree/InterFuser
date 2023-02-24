@@ -5,7 +5,6 @@ FROM ubuntu:bionic
 ENV USER="wlq20"
 ENV NAME="Will Queree"
 ENV EMAIL="wqueree@gmail.com"
-ENV BUILD_ID="1"
 
 # Create User
 RUN adduser ${USER}
@@ -38,8 +37,8 @@ RUN chown -R ${USER} InterFuser
 # Install InterFuser
 USER ${USER}
 WORKDIR /InterFuser
-RUN git pull
 RUN git checkout develop
+RUN git pull
 RUN conda env create -f docker/environment.yml
 WORKDIR /InterFuser/interfuser
 SHELL ["conda", "run", "-n", "interfuser", "/bin/bash", "-c"]
@@ -53,7 +52,7 @@ RUN ls carla/PythonAPI/carla/dist
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.14-py3.7-linux-x86_64.egg
 COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
-RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 -y
+RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 libomp5 -y
 
 # Display Configuration
 # RUN apt-get install module-init-tools xserver-xorg mesa-utils libvulkan1 -y

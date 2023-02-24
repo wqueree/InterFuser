@@ -1,1 +1,1 @@
-hare build --force-rm -f Dockerfile.bionic -t wlq20/interfuser:bionic .
+hare build --force-rm --no-cache -f Dockerfile.bionic -t wlq20/interfuser:bionic .
