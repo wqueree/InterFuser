@@ -48,6 +48,7 @@ RUN python setup.py develop
 WORKDIR /InterFuser
 RUN chmod +x setup_carla_latest.sh
 RUN ./setup_carla_latest.sh
+RUN ls carla/PythonAPI/carla/dist
 RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.14-py3.7-linux-x86_64.egg
 COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
