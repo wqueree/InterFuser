@@ -5,6 +5,7 @@ FROM ubuntu:bionic
 ENV USER="wlq20"
 ENV NAME="Will Queree"
 ENV EMAIL="wqueree@gmail.com"
+ENV BUILD_ID="1"
 
 # Create User
 RUN adduser ${USER}
