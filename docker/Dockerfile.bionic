@@ -46,10 +46,10 @@ RUN python setup.py develop
 
 # Install CARLA
 WORKDIR /InterFuser
-RUN chmod +x setup_carla_latest.sh
-RUN ./setup_carla_latest.sh
+RUN chmod +x setup_carla.sh
+RUN ./setup_carla.sh
 RUN ls carla/PythonAPI/carla/dist
-RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.14-py3.7-linux-x86_64.egg
+RUN easy_install carla/PythonAPI/carla/dist/carla-0.9.10.1-py3.7-linux-x86_64.egg
 COPY interfuser.pth.tar /InterFuser/leaderboard/team_code/interfuser.pth.tar
 USER root
 RUN apt-get install libpng16-16 libjpeg8 libtiff5 libglib2.0-0 libsm6 libomp5 -y
