@@ -15,7 +15,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install Dockerfile Utilities
-RUN apt-get install gcc wget git gnupg2 -y
+RUN apt-get install gcc wget git gnupg2 software-properties-common lsb-release -y
 
 # Install Anaconda3
 RUN apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
