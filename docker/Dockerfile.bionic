@@ -48,7 +48,7 @@ RUN python setup.py develop
 USER root
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
 RUN add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
-RUN apt-get update && apt-get install carla-simulator=0.9.10-1
+RUN apt-get update && apt-get install carla-simulator=0.9.10.1
 WORKDIR /opt/carla-simulator
 
 
