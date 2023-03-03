@@ -874,18 +874,18 @@ def main():
     args.world_size = 1
     args.rank = 0  # global rank
     if args.distributed:
-        print([torch.cuda.device(i) for i in range(torch.cuda.device_count())])
         args.device = "cuda:%d" % args.local_rank
         torch.cuda.set_device(args.local_rank)
         torch.distributed.init_process_group(backend="nccl", init_method="env://")
         args.world_size = torch.distributed.get_world_size()
         args.rank = torch.distributed.get_rank()
+        print(f"{args.device} {args.local_rank} {args.rank}")
         _logger.info(
             "Training in distributed mode with multiple processes, 1 GPU per process. Process %d, total %d."
             % (args.rank, args.world_size)
         )
     else:
-        _logger.info("Training with a single process on 1 GPUs. Detected world size: %d" % (int(os.environ["WORLD_SIZE"])))
+        _logger.info("Training with a single process on 1 GPUs.")
     assert args.rank >= 0
 
     # resolve AMP arguments based on PyTorch / Apex availability
