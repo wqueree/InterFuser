@@ -884,7 +884,7 @@ def main():
             % (args.rank, args.world_size)
         )
     else:
-        _logger.info("Training with a single process on 1 GPUs.")
+        _logger.info("Training with a single process on 1 GPUs. Detected world size: %d" % (int(os.environ["WORLD_SIZE"])))
     assert args.rank >= 0
 
     # resolve AMP arguments based on PyTorch / Apex availability

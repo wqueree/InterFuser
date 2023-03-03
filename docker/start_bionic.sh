@@ -1,1 +1,1 @@
-hare run -d -it -e SDL_VIDEODRIVER='offscreen' --gpus all wlq20/interfuser:bionic
+hare run -d -it --gpus all wlq20/interfuser:bionic
