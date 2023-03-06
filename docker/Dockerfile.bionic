@@ -63,7 +63,7 @@ ENV XDG_RUNTIME_DIR /run/user/$(id -u)
 ENV SDL_VIDEODRIVER offscreen
 
 # Install Development Utilities
-RUN apt-get install neofetch net-tools screen strace -y
+RUN apt-get install neofetch net-tools vim screen strace -y
 
 # Post Installation Pull
 USER ${USER}

@@ -1,0 +1,14 @@
+hare run -p 20000:20000 -p 20001:20001 -dit --rm --gpus '"device=2"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20000 -opengl
+hare run -p 20002:20002 -p 20003:20003 -dit --rm --gpus '"device=3"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20002 -opengl
+hare run -p 20004:20004 -p 20005:20005 -dit --rm --gpus '"device=4"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20004 -opengl
+hare run -p 20006:20006 -p 20007:20007 -dit --rm --gpus '"device=5"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20006 -opengl
+hare run -p 20008:20008 -p 20009:20009 -dit --rm --gpus '"device=2"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20008 -opengl
+hare run -p 20010:20010 -p 20011:20011 -dit --rm --gpus '"device=3"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20010 -opengl
+hare run -p 20012:20012 -p 20013:20013 -dit --rm --gpus '"device=4"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20012 -opengl
+hare run -p 20014:20014 -p 20015:20015 -dit --rm --gpus '"device=5"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20014 -opengl
+hare run -p 20016:20016 -p 20017:20017 -dit --rm --gpus '"device=2"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20016 -opengl
+hare run -p 20018:20018 -p 20019:20019 -dit --rm --gpus '"device=3"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20018 -opengl
+hare run -p 20020:20020 -p 20021:20021 -dit --rm --gpus '"device=4"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20020 -opengl
+hare run -p 20022:20022 -p 20023:20023 -dit --rm --gpus '"device=5"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20022 -opengl
+hare run -p 20024:20024 -p 20025:20025 -dit --rm --gpus '"device=2"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20024 -opengl
+hare run -p 20026:20026 -p 20027:20027 -dit --rm --gpus '"device=3"' -e SDL_VIDEODRIVER='offscreen' -e SDL_AUDIODRIVER='dsp' --runtime=nvidia carlasim/carla:0.9.10.1 ./CarlaUE4.sh --world-port=20026 -opengl
