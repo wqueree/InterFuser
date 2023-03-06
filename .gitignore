@@ -1,4 +1,5 @@
 *.pth.tar
 __pycache__/
 carla/
+venv/
 data/eval/
