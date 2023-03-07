@@ -54,7 +54,7 @@ routes[
 ip_ports = []
 
 for port in range(20000, 20028, 2):
-    ip_ports.append(("localhost", port, port + 500))
+    ip_ports.append(("localhost", port, port + 1))
 
 
 carla_seed = 2000

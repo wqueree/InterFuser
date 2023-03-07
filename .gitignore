@@ -3,3 +3,6 @@ __pycache__/
 carla/
 venv/
 data/eval/
+data_collection/bashs/
+data_collection/yamls/
+data_collection/batch_run/

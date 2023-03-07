@@ -84,6 +84,7 @@ class LeaderboardEvaluator(object):
             self.client_timeout = float(args.timeout)
         self.client.set_timeout(self.client_timeout)
 
+
         self.traffic_manager = self.client.get_trafficmanager(int(args.trafficManagerPort))
 
         dist = pkg_resources.get_distribution("carla")
@@ -476,13 +477,20 @@ def main():
     statistics_manager = StatisticsManager()
 
     try:
+        print("boo1")
         leaderboard_evaluator = LeaderboardEvaluator(arguments, statistics_manager)
+        print("boo2")
         leaderboard_evaluator.run(arguments)
+        print("boo3")
 
     except Exception as e:
+        print("boo4")
         traceback.print_exc()
+        print("boo5")
     finally:
+        print("boo6")
         del leaderboard_evaluator
+        print("boo7")
 
 
 if __name__ == '__main__':

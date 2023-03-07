@@ -1,4 +1,7 @@
 #!/bin/bash
+
+source venv/bin/activate
+
 export DATA_ROOT=dataset
 export YAML_ROOT=data_collection/yamls
 export CARLA_ROOT=carla
@@ -9,6 +12,7 @@ export PYTHONPATH=$PYTHONPATH:$CARLA_ROOT/PythonAPI/carla/dist/carla-0.9.10-py3.
 export PYTHONPATH=$PYTHONPATH:leaderboard
 export PYTHONPATH=$PYTHONPATH:leaderboard/team_code
 export PYTHONPATH=$PYTHONPATH:scenario_runner
+export PYTHONPATH=$PYTHONPATH:scenario_runner/srunner
 
 export LEADERBOARD_ROOT=leaderboard
 export CHALLENGE_TRACK_CODENAME=SENSORS
