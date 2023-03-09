@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source venv/bin/activate
-
 export DATA_ROOT=dataset
 export YAML_ROOT=data_collection/yamls
 export CARLA_ROOT=carla
@@ -20,6 +18,8 @@ export DEBUG_CHALLENGE=0
 export REPETITIONS=1 # multiple evaluation runs
 export TEAM_AGENT=${LEADERBOARD_ROOT}/team_code/auto_pilot.py # agent
 export RESUME=True
+
+which python3
 
 python3 ${LEADERBOARD_ROOT}/leaderboard/leaderboard_evaluator.py \
 --scenarios=${SCENARIOS}  \
